@@ -15,7 +15,7 @@ RUN set -eux \
     && apk add --no-cache --virtual .fetch-deps \
         ca-certificates \
         openssl \
-        tar \
+        tar wget \
     \
     && wget -O postgis.tar.gz "https://github.com/postgis/postgis/archive/${POSTGIS_VERSION}.tar.gz" \
     && echo "${POSTGIS_SHA256} *postgis.tar.gz" | sha256sum -c - \
